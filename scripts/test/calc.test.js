@@ -1,5 +1,7 @@
-const addition = require("../calc");
-const subtract = require("../calc");
+// const addition = require("../calc");
+// const subtract = require("../calc");
+// const { test } = require("picomatch");
+const {addition, subtract, multiply, divide} = require("../calc");
 
 
 describe("Calculator", () => {
@@ -17,16 +19,40 @@ describe("Calculator", () => {
     });
 
     describe("Subtract function", () => {
-        // test("should return 10 for 20 - 10", () => {
-        //     expect(subtract(20, 10)).toBe(10);
-        // });
+        test("should return 10 for 20 - 10", () => {
+            expect(subtract(20, 10)).toBe(10);
+        });
+        test("should return 5 for 10 - 5", () => {
+            expect(subtract(10, 5)).toBe(5);
+        });
+        test("should return 0 for 5 - 5", () => {
+            expect(subtract(5, 5)).toBe(0);
+        });
     });
 
     describe("Multiply function", () => {
+        test("should return 100 for 10 * 10", () => {
+            expect(multiply(10, 10)).toBe(100);
+        });
+        test("should return 25 for 5 * 5", () => {
+            expect(multiply(5, 5)).toBe(25);
+        });
+        test("should return 50 for 10 * 5", () => {
+            expect(multiply(10, 5)).toBe(50);
+        });
 
     });
     
     describe("Divide function", () => {
+        test("should return 2 for 10 / 5", () => {
+            expect(divide(10, 5)).toBe(2);
+        });
+        test("should return 5 for 25 / 5", () => {
+            expect(divide(25, 5)).toBe(5);
+        });
+        test("should return 10 for 100 / 10", () => {
+            expect(divide(100, 10)).toBe(10);
+        });
 
     });
 
