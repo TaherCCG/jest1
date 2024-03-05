@@ -1,5 +1,5 @@
-
 const addition = require("../calc");
+const subtract = require("../calc");
 
 
 describe("Calculator", () => {
@@ -17,7 +17,9 @@ describe("Calculator", () => {
     });
 
     describe("Subtract function", () => {
-
+        // test("should return 10 for 20 - 10", () => {
+        //     expect(subtract(20, 10)).toBe(10);
+        // });
     });
 
     describe("Multiply function", () => {
