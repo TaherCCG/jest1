@@ -21,9 +21,29 @@ describe("Calculator", () => {
                 addition('a', 10);
             }).toThrow("Invalid input. Please enter a number.");
         });
+        test('throws error when input is not a number', () => {
+            expect(() => {
+                addition(10, 'a');
+            }).toThrow("Invalid input. Please enter a number.");
+        });
         test("should return 0.3 for 0.1 + 0.2", () => {
             expect(addition(0.1, 0.2)).toBeCloseTo(0.3);
         });
+        test("should return 0 for 0 + 0", () => {
+            expect(addition(0, 0)).toBe(0);
+        });
+        // undefined test
+        test('throws error when input is undefined', () => {
+            expect(() => {
+                addition(undefined, 10);
+            }).toThrow("Invalid input. Please enter a number.");
+        });
+        test('throws error when input is undefined', () => {
+            expect(() => {
+                addition(10, undefined);
+            }).toThrow("Invalid input. Please enter a number.");
+        });
+
     });
     // Subtract function tests
     describe("Subtract function", () => {
