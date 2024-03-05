@@ -1,6 +1,8 @@
 function addition(num1,num2) {
     if (isNaN(num1) || isNaN(num2)) {
         throw new Error("Invalid input. Please enter a number.");
+    } else if (num1 === undefined || num2 === undefined) {
+        throw new Error("Invalid input. Please enter a number.");
     } else {
     return num1+num2;
     };
